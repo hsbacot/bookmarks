@@ -1,3 +1,11 @@
+<% if user_signed_in? %>
+<div class="center hero-unit">
+
+	<h1>Welcome to Bookmarks!</h1>
+	<h2>Take me to <%= link_to "My Bookmarks", bookmarks_path %><h2>
+
+</div>
+<% else %>
 <div class="center hero-unit">
 
 	<h1>Bookmarks</h1>
@@ -6,7 +14,8 @@
 	
 	<p>Store your bookmarks here, retrieve them anywhere</p>
 	<br>
-	<%= link_to "Sign Up!" %>
+	<%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-large btn-primary" %>
 
 
 </div>
+<% end %>

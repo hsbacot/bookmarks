@@ -1,6 +1,8 @@
 
 @import "bootstrap";
 
+$main-color: #333333;
+
 html {
   overflow-y: scroll;
 }
@@ -58,15 +60,12 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: black;
-  text-transform: uppercase;
-  letter-spacing: -1px;
+  color: $main-color;
   padding-top: 9px;
-  font-weight: bold;
   line-height: 1;
 }
 
 #logo:hover {
-  color: black;
+  color: $main-color;
   text-decoration: none;
 }
