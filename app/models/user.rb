@@ -10,4 +10,13 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   validates :username, :presence => true, :uniqueness => true, :length => { :minimum => 3, :maximum => 30 }
+
+  # Creates User Profile
+  has_one :user_profile
+
+  has_many :bookmarks
+
+  # after_create :create_child
+  #   	UserProfile.create("user_id" => :id)
+
 end
